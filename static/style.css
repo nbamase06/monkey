@@ -1,0 +1,59 @@
+body {
+  font-family: sans-serif;                          margin: 1em;
+  background: #f4f4f4;
+  color: #333;                                    }
+                                                  h1 {
+  text-align: center;                             }
+                                                  .pair-list {
+  display: grid;                                    grid-template-columns: 1fr;
+  gap: 1em;                                       }
+                                                  .pair-card {
+  background: #fff;                                 padding: 1em;
+  border-radius: 10px;                              text-decoration: none;
+  color: inherit;                                   box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+                                                  .pair-card:hover {
+  background: #e8f7ff;
+}
+                   
+                     .pair-row {                                         display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;                                    border-radius: 12px;
+      margin-bottom: 10px;
+      color: #fff;
+    }                                             
+    .pair-info {                                        display: flex;                                    flex-direction: column;
+      font-weight: bold;                              }                                             
+    .pair-name {                                        font-size: 1.8rem;
+    }                                             
+    .pair-datetime {                                    font-size: 0.8rem;
+      opacity: 0.85;                                  }
+                                                      .pair-status {
+      text-align: right;
+    }                                             
+    .status-text {                                      font-size: 1.5rem;
+      font-weight: bold;                              }
+                                                      .status-buy {
+      color: #00c853;                                 }
+                                                      .status-sell {
+      color: #d50000;                                 }
+                                                      .confidence {
+      font-size: 1.1rem;                                opacity: 0.9;
+    }                                             
+    .bg1 { background-color: #3949ab; }
+    .bg2 { background-color: #00897b; }               .bg3 { background-color: #5e35b1; }
+    .bg4 { background-color: #f4511e; }
+    .bg5 { background-color: #6d4c41; }
+    .bg6 { background-color: #2e7d32; }           
+    a {
+      text-decoration: none;
+    }                                             
+    @media (max-width: 600px) {
+      .pair-name { font-size: 1.5rem; }
+      .status-text { font-size: 1.3rem; }               .confidence { font-size: 1rem; }
+    }
+                                                  
+                                                  @media (min-width: 600px) {
+  .pair-list {                                        grid-template-columns: repeat(2, 1fr);
+  }                                               }

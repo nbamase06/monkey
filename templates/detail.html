@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ data.pair }} Details</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <h1>{{ data.pair }} 📈 Details</h1>
+  <p><strong>Signal:</strong> {{ data.ai_signal }} ({{ data.confidence }})</p>
+  <p><strong>Entry Price:</strong> {{ data.entry_price }}</p>
+  <p><strong>Stop Loss:</strong> {{ data.sl }}</p>
+  <p><strong>Take Profit:</strong> {{ data.tp }}</p>
+  <hr>
+  <h3>📌 Indicators</h3>
+  <p><strong>RSI:</strong> {{ data.rsi }}</p>
+  <p><strong>MACD Diff:</strong> {{ data.macd_diff }}</p>
+  <p><strong>EMA Fast:</strong> {{ data.ema_fast }}</p>
+  <p><strong>EMA Slow:</strong> {{ data.ema_slow }}</p>
+  <a href="/">← Back to overview</a>
+</body>
+</html>

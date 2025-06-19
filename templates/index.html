@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">                                  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">                                <title>Forex Signals</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <style>
+  
+  </style>
+</head>                                           <body>
+  <h1 style="text-align:center;">📊 Forex Signals</h1>
+                                                    {% for result in results %}
+  <a href="/pair/{{ result.from_symbol }}/{{ result.to_symbol }}">
+    <div class="pair-row bg{{ loop.index }}">           <!-- LEFT: Pair + datetime -->
+      <div class="pair-info" style="flex: 2;">            <div class="pair-name">{{ result.pair }}</div>
+        <div class="pair-datetime">{{ result.datetime }}</div>                                            </div>
+                                                        <!-- MIDDLE: Entry & confidence -->
+      <div style="flex: 1.5; text-align: center;">        <div class="confidence" style="font-size: 0.9rem; color: #eee;">Open: {{ result.entry_price }}</div>
+        <div class="confidence" style="font-size: 0.9rem; color: #eee;">Conf: {{ result.confidence }}</div>                                                 </div>
+
+      <!-- RIGHT: Signal -->                            <div class="pair-status" style="flex: 1;">
+        <div class="status-text {{ 'status-buy' if 'BUY' in result.ai_signal else 'status-sell' }}">
+          {{ result.ai_signal }}                          </div>
+      </div>                                          </div>
+  </a>                                            {% endfor %}
+                                                  
+</body>                                           </html>
